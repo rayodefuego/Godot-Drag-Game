@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/MoveableObject.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/DraggManager.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/RestZone.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Fondo de boton.png" type="Texture" id=4]
+[ext_resource path="res://Boton 2.png" type="Texture" id=5]
+
+[node name="PrincipalScene" type="Node2D"]
+
+[node name="MoveableObject" parent="." instance=ExtResource( 1 )]
+position = Vector2( 190.652, 489.994 )
+
+[node name="DraggManager" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="RestZone" parent="." instance=ExtResource( 3 )]
+snap_radio = 5.0
+
+[node name="MoveableObject2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 376.616, 497.623 )
+texture = ExtResource( 5 )
+
+[node name="Fondo de boton" type="Sprite" parent="."]
+position = Vector2( 373.327, 260.33 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+
+[node name="RestZone2" parent="Fondo de boton" instance=ExtResource( 3 )]
+position = Vector2( 0, 0 )
+scale = Vector2( 0.5, 0.5 )
+snap_radio = 5.0
+
+[node name="Fondo de boton2" type="Sprite" parent="."]
+position = Vector2( 603.327, 260.33 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+
+[node name="RestZone2" parent="Fondo de boton2" instance=ExtResource( 3 )]
+position = Vector2( 0, 0 )
+scale = Vector2( 0.5, 0.5 )
+snap_radio = 5.0

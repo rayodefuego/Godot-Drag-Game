@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/RestZone.gd" type="Script" id=1]
+
+[node name="RestZone" type="Position2D" groups=[
+"RestPoints",
+]]
+position = Vector2( 264.838, 164.535 )
+script = ExtResource( 1 )
